@@ -397,7 +397,7 @@ fn permute_expression_pair<'params, C: CurveAffine, P: Params<'params, C>, R: Rn
     table_expression: &Polynomial<C::Scalar, LagrangeCoeff>,
 ) -> Result<ExpressionPair<C::Scalar>, Error> {
     let blinding_factors = pk.vk.cs.blinding_factors();
-    let usable_rows = params.n() as usize - (blinding_factors + 1);
+    let usable_rows = params.n() as usize;
 
     let mut permuted_input_expression: Vec<C::Scalar> = input_expression.to_vec();
     permuted_input_expression.truncate(usable_rows);

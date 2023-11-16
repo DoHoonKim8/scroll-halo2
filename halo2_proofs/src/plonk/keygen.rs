@@ -370,8 +370,8 @@ where
         selectors_vec,
         selectors,
         copies: vec![],
-        rw_rows: 0..params.n() as usize - (cs.blinding_factors() + 1),
-        usable_rows: 0..params.n() as usize - (cs.blinding_factors() + 1),
+        rw_rows: 0..params.n() as usize,
+        usable_rows: 0..params.n() as usize,
         _marker: std::marker::PhantomData,
     };
 
@@ -477,8 +477,8 @@ where
         selectors_vec,
         selectors,
         copies: vec![],
-        rw_rows: 0..params.n() as usize - (cs.blinding_factors() + 1),
-        usable_rows: 0..params.n() as usize - (cs.blinding_factors() + 1),
+        rw_rows: 0..params.n() as usize,
+        usable_rows: 0..params.n() as usize,
         _marker: std::marker::PhantomData,
     };
 

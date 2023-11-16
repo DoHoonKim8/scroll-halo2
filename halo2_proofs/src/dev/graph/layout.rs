@@ -171,7 +171,7 @@ impl CircuitLayout {
         }
 
         // Mark the unusable rows of the circuit.
-        let usable_rows = n - (cs.blinding_factors() + 1);
+        let usable_rows = n;
         if view_bottom > usable_rows {
             root.draw(&Rectangle::new(
                 [(0, usable_rows), (total_columns, view_bottom)],

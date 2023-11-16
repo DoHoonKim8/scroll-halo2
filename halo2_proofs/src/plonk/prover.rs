@@ -385,7 +385,7 @@ where
             vec![vec![domain.empty_lagrange_assigned(); meta.num_advice_columns]; instances.len()];
         let mut challenges = HashMap::<usize, Scheme::Scalar>::with_capacity(meta.num_challenges);
 
-        let unusable_rows_start = params.n() as usize - (meta.blinding_factors() + 1);
+        let unusable_rows_start = params.n() as usize;
         for current_phase in pk.vk.cs.phases() {
             let column_indices = meta
                 .advice_column_phase

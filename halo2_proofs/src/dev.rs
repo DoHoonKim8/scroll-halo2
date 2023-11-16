@@ -924,7 +924,7 @@ impl<'a, F: FieldExt> MockProver<'a, F> {
 
         // Advice columns contain blinding factors.
         let blinding_factors = cs.blinding_factors();
-        let usable_rows = n - (blinding_factors + 1);
+        let usable_rows = n;
         let advice_vec = Arc::new(vec![
             {
                 let mut column = vec![CellValue::Unassigned; n];
